@@ -1,0 +1,43 @@
+Reto 1: El Analizador de Telemetría (F1) 🏎️
+Para calentar motores con la sintaxis, variables y operadores, vas a programar un simulador que procese los datos crudos que escupe un monoplaza al pasar por la recta de meta.
+
+📋 El Objetivo
+Debes declarar las variables con los tipos de datos correctos en Java, realizar los cálculos necesarios utilizando operadores aritméticos y mostrar un reporte limpio por la consola.
+
+📥 Datos de entrada (Fíjalos tú mismo como variables)
+Nombre del piloto: Fernando Alonso (o tu favorito).
+
+Velocidad máxima alcanzada: 342.5 km/h.
+
+Tiempo de la última vuelta: 84.32 segundos.
+
+Consumo de combustible en esa vuelta: 2.15 kg.
+
+Combustible total restante en el tanque: 45.0 kg.
+
+⚙️ Cálculos que debe hacer tu programa
+Tiempo en formato minutos/segundos: Convierte esos 84.32 segundos totales a cuántos minutos y segundos exactos son (pista: usa divisiones y el operador módulo %).
+
+Vueltas estimadas: Calcula cuántas vueltas completas puede dar el coche antes de quedarse completamente seco (sin gasolina), usando el combustible restante y el consumo por vuelta.
+
+💻 Tu punto de partida en Main.java
+Abre tu archivo y empieza estructurándolo así:
+
+Java
+public class Main {
+    public static void main(String[] args) {
+        // 1. Declaración de variables con los datos de entrada
+        String piloto = "Fernando Alonso";
+        // ... define el resto aquí con sus tipos (double, int, etc.)
+
+        // 2. Operaciones y Cálculos
+        // ... tus fórmulas aquí
+
+        // 3. Imprimir el reporte por consola usando System.out.println()
+        System.out.println("=== REPORTE DE TELEMETRÍA ===");
+        System.out.println("Piloto: " + piloto);
+        // ... muestra el resto de resultados
+    }
+}
+
+Escribe el código directamente en tu editor, asegúrate de guardar (Ctrl + S) y, en cuanto lo tengas o si te encallas con alguna fórmula matemática en Java, me lo pegas por aquí y lo pulimos juntos. ¡A por ello!
