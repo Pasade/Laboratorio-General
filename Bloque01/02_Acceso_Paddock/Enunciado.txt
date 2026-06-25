@@ -1,0 +1,21 @@
+Reto 2: El Control de Acceso al Paddock (F1) 🎟️🔒
+Imagínica que te han encargado programar el software de los tornos automáticos que controlan quién puede entrar al Paddock y al Pit Lane del circuito durante el Gran Premio.
+
+📋 El Objetivo
+Practicar con variables de texto (String), caracteres (char), booleanos (boolean) y el uso de operadores lógicos (&&, ||, !) para decidir si una persona tiene permitido el paso a zonas restringidas.
+
+📥 Datos de entrada (Crea estas variables en tu Main.java)
+Nombre del invitado: "Carlos Sainz" (o el que quieras).
+
+Tipo de pase: Un solo caracter (char), que puede ser 'P' (Paddock), 'V' (VIP) o 'G' (General). Para este caso, asígnale 'P'.
+
+Tiene credencial de equipo: Un booleano (boolean) que indique si trabaja para una escudería o no. Pónmelo en true.
+
+Sancionado por la FIA: Un booleano que indique si el sujeto está vetado por comportamiento indebido. Pónmelo en false.
+
+⚙️ Condiciones lógicos que debe evaluar tu programa
+Debes crear tres variables booleanas basadas en las anteriores usando operadores lógicos:
+
+puedeEntrarAlPaddock: Un invitado puede entrar al Paddock si su pase es 'P' O si su pase es 'V'. Pero ¡ojo!, si está sancionado por la FIA, no puede entrar bajo ninguna circunstancia (usa el operador !).
+
+puedeEntrarAlPitLane: El Pit Lane es una zona peligrosa. Solo pueden entrar los que tengan permitido el acceso al Paddock Y además tengan credencial de equipo.
