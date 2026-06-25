@@ -1,0 +1,27 @@
+Reto 3: El Calculador de Paradas en Boxes (Estrategia) 🏁⏱️
+Para este último ejercicio vamos a mezclar operadores aritméticos combinados (como +=, -=, *=) y operadores de incremento/decremento (++, --), que son fundamentales para hacer código más corto y elegante.
+
+📋 El Objetivo
+Simular la pérdida de tiempo y el desgaste que sufre un neumático vuelta a vuelta para calcular el impacto de una parada en boxes (Pit Stop).
+
+📥 Datos de entrada (Crea las variables en un nuevo Main.java)
+Tiempo base de vuelta (sin desgaste): 82.0 segundos (un double).
+
+Pérdida de tiempo por vuelta (desgaste del neumático): 0.15 segundos (un double). Esto es lo que se le suma al tiempo de vuelta en cada vuelta que pasa.
+
+Tiempo que se pierde en hacer un Pit Stop: 23.5 segundos (un double).
+
+⚙️ Operaciones con operadores compuestos (Paso a Paso)
+Vas a simular lo que le pasa al coche cronológicamente usando los operadores asignación compuestos:
+
+Vuelta 1: El coche empieza con el tiempo base. Imprime el tiempo actual.
+
+Vuelta 2: El neumático se desgasta. Súmale la pérdida de tiempo por vuelta al tiempo base usando el operador +=. Imprime el nuevo tiempo.
+
+Vuelta 3: El neumático se desgasta otra vez. Súmale de nuevo la pérdida usando +=. Imprime el nuevo tiempo.
+
+Vuelta 4 (Entrada a Boxes): En esta vuelta el piloto para a cambiar neumáticos.
+
+Primero, el tiempo de la vuelta aumenta porque se detiene en el box: súmale el tiempo de Pit Stop usando +=.
+
+Segundo, como ha puesto ruedas nuevas y frescas, el desgaste acumulado se resetea: réstale las dos dosis de desgaste que habías sumado antes usando -= (o simplemente vuelve a asignarle el tiempo base original).
