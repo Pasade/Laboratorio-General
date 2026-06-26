@@ -1,0 +1,31 @@
+Reto 9: El Test de Temperatura de Mantas Térmicas (do-while) 🌡️🔥
+Antes de montar los neumáticos en el coche, se les colocan unas mantas eléctricas para calentarlos. Los mecánicos necesitan un sistema que haga un chequeo de seguridad obligatorio. Para esto usaremos el bucle do-while, cuya gran característica es que siempre se ejecuta al menos una vez, ya que la condición se comprueba al final.
+
+📋 El Objetivo
+Simular el calentamiento de los neumáticos usando un bucle do-while, incrementando la temperatura hasta alcanzar el punto óptimo.
+
+📥 Variables de entrada (Crea un nuevo proyecto)
+double tempNeumatico = 60.0; (Temperatura inicial en °C).
+
+double tempOptima = 90.0; (La meta a alcanzar).
+
+⚙️ Lógica que debes programar
+Queremos un bloque do { ... } while (...); que repita el calentamiento. En cada pasada debe:
+
+Sumarle 10.0 grados a la temperatura actual (usa el operador compuesto +=).
+
+Imprimir con printf un mensaje que diga: "Calentando manta... Temperatura actual: %.1f°C%n".
+
+El bucle debe repetirse mientras la tempNeumatico sea menor que la tempOptima.
+
+Al salir del bucle, imprime el aviso definitivo para los mecánicos:
+"¡NEUMÁTICOS EN TEMPERATURA! Listos para salir a pista."
+
+📂 Tu rutina en la terminal:
+Sube un nivel para salir del consumo: cd ..
+
+Crea la nueva carpeta: mkdir 09_Mantas_DoWhile
+
+Crea el archivo: cd 09_Mantas_DoWhile && touch Main.java
+
+Monta este último bucle de la fase, recuerda cerrar el while(...); final con su punto y coma (que en el do-while es obligatorio), ¡y lánzame el resultado! ¿Listo para el pleno en la Fase 3?
