@@ -1,0 +1,41 @@
+🟢 ¡Bienvenido a la Fase 2: Estructuras Condicionales! 🚦
+Aquí es donde los programas empiezan a "pensar" y tomar caminos diferentes según lo que pase. Dejamos atrás las asignaciones directas y entramos en el terreno de los if, else if, else y los menús interactivos con switch.
+
+Vamos a estrenar la fase con un ejercicio de pura estrategia de carrera.
+
+Reto 4: El Selector de Neumáticos según el Clima 🌧️☀️
+Los ingenieros en el muro de boxes tienen que decidir qué neumático ponerle al coche antes de salir a la pista en función de dos variables: la humedad del asfalto y la temperatura de la pista.
+
+📋 El Objetivo
+Crear una estructura de condiciones anidadas (if / else if / else) para recomendar el compuesto de neumáticos ideal.
+
+📥 Variables de entrada (Crea un nuevo proyecto para esto)
+double humedadAsfalto = 65.5; (Porcentaje de humedad de 0.0 a 100.0).
+
+double temperaturaPista = 14.0; (En grados Celsius).
+
+⚙️ Lógica que debes programar
+Tu programa debe evaluar las variables en este orden de prioridad:
+
+Si la humedad es mayor al 50%: Significa que la pista está mojada.
+
+Si la temperatura es menor de 15°C, el neumático ideal es el "Lluvia Extrema (Wets)" (hace mucho frío y hay agua).
+
+Si la temperatura es mayor o igual a 15°C, el neumático ideal es el "Intermedio (Intermediates)".
+
+Si la humedad es menor o igual al 50%: Significa que la pista está seca (Neumáticos Slicks).
+
+Si la temperatura de la pista es mayor de 30°C, recomienda "Compuesto Duro (Hard)" (el calor degrada rápido las ruedas).
+
+Si está entre 15°C y 30°C (ambos inclusive), recomienda "Compuesto Medio (Medium)".
+
+Si hace menos de 15°C, recomienda "Compuesto Blando (Soft)" (cuesta calentar el neumático).
+
+📂 Tu tarea para arrancar:
+Crea la carpeta 04_Selector_Neumaticos dentro de Bloque01 por la terminal.
+
+Crea tu Main.java.
+
+Intenta montar este árbol de decisiones con if y else if.
+
+¿Preparado para que tu código empiece a tomar decisiones de estratega jefe? ¡A por ello!
