@@ -1,0 +1,41 @@
+Reto 17: El Buscador de Infracciones en Pista (Matrices + Filtros) 🏎️🏁🚨
+Para cerrar la sección de matrices con matrícula de honor, vamos a juntar el recorrido de una matriz con un filtro lógico de control (un if).
+
+En una carrera, los comisarios revisan los límites de pista. Si un piloto se sale de las líneas blancas 3 veces o más, le cae una sanción de tiempo. Vamos a auditar los datos del fin de semana.
+
+📋 El Objetivo
+Recorrer una matriz completa que guarda las infracciones de los pilotos y contar de forma automática quiénes han superado el límite permitido.
+
+⚙️ Lógica que debes programar
+En tu método main, declara la siguiente matriz de tipo int[][] que registra el número de veces que 3 pilotos se han salido de pista en 3 sesiones distintas (Libres, Clasificación y Carrera). Es una tabla de 3x3:
+
+Java
+int[][] infraccionesGrid = {
+    {1, 0, 2}, // Piloto 1 (Sesión 1, 2, 3) -> Total: 3 infracciones
+    {0, 1, 1}, // Piloto 2 (Sesión 1, 2, 3) -> Total: 2 infracciones
+    {2, 3, 0}  // Piloto 3 (Sesión 1, 2, 3) -> Total: 5 infracciones
+};
+Queremos saber el total acumulado de infracciones de cada piloto a lo largo de las 3 sesiones.
+
+Para lograrlo, tu bucle externo for (el de las filas i) representará a cada piloto.
+
+Justo antes de entrar al bucle interno, crea una variable acumuladora: int totalPiloto = 0;. De esta forma, cada vez que saltemos a un nuevo piloto, la cuenta se reiniciará a cero.
+
+El bucle interno for (el de las columnas j) sumará las infracciones de sus 3 sesiones a la variable totalPiloto.
+
+Al salir del bucle interno (pero todavía dentro del bucle externo), evalúa con un if:
+
+Si el totalPiloto es mayor o igual a 3, imprime un aviso de penalización:
+"🚨 Piloto %d acumula %d infracciones. ¡AVISO DE SANCIÓN DE 5 SEGUNDOS!%n"
+
+Si es menor, imprime un mensaje limpio:
+"✅ Piloto %d acumula %d infracciones. Todo en regla.%n"
+
+📂 Tu rutina en la terminal:
+Sube un nivel: cd ..
+
+Crea la carpeta: mkdir 17_Matriz_Filtro
+
+Genera el archivo: cd 17_Matriz_Filtro && touch Main.java
+
+Este ejercicio te obliga a pensar con precisión quirúrgica dónde declarar la variable que suma para que no arrastre los datos del piloto anterior. ¡A por la última bandera de cuadros del bloque de matrices, Gago!
