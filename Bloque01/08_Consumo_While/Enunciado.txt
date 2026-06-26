@@ -1,0 +1,37 @@
+Reto 8: Telemetría de Combustible (El bucle while) ⛽🏎️
+En plena carrera, el coche va gastando gasolina en cada vuelta. El ingeniero en el muro necesita controlar el estado del depósito vuelta a vuelta y avisar al piloto de forma automática cuando entre en la "zona de reserva".
+
+📋 El Objetivo
+Utilizar un bucle while para simular el consumo de combustible vuelta a vuelta hasta que baje de un límite crítico.
+
+📥 Datos de entrada (Crea las variables en tu nuevo archivo)
+Combustible inicial en el tanque: 25.0 litros (un double).
+
+Consumo por vuelta: 3.5 litros (un double).
+
+Límite de reserva de seguridad: 5.0 litros (un double).
+
+Contador de vueltas: int vuelta = 1;
+
+⚙️ Lógica que debes programar
+Queremos un bucle que se ejecute mientras el combustible actual sea mayor o igual al límite de reserva (5.0).
+
+Dentro del bucle, en cada vuelta debe pasar lo siguiente:
+
+Imprimir un mensaje formateado con printf que diga: "Vuelta X - Combustible restante: YY.YY litros".
+
+Restarle el consumo por vuelta al combustible actual (¡usa tus operadores compuestos de la Fase 1!).
+
+Incrementar el número de la vuelta en 1 (usando vuelta++).
+
+Cuando el bucle termine (porque el combustible ya ha bajado del límite de seguridad), el programa debe imprimir la advertencia final en el muro de boxes:
+"¡ALERTA BOXES! Combustible crítico. Entrar en la siguiente vuelta."
+
+📂 Tu rutina limpia en la terminal:
+Sube un nivel en la terminal: cd ..
+
+Crea la carpeta del octavo ejercicio: mkdir 08_Consumo_While
+
+Entra y crea el archivo: cd 08_Consumo_While && touch Main.java
+
+Monta el bucle while, dale formato de dos decimales a los litros con %.2f y lánzame el reporte. ¡A por ello, jefe de estrategia!
