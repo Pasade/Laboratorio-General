@@ -1,0 +1,39 @@
+Reto 14: El Analista de Telemetría (Media y Filtrado) 📊⚡
+Vamos a cerrar la primera tanda de Arrays con un ejercicio clásico de análisis de datos. Queremos evaluar las velocidades punta (Top Speed) registradas por un monoplaza en 5 vueltas consecutivas para sacar la velocidad media y saber cuántas veces superó un límite.
+
+📋 El Objetivo
+Aprender a calcular un promedio sumando los elementos de un array y usar un condicional dentro del bucle para contar elementos que cumplen un requisito.
+
+⚙️ Lógica que debes programar
+Crea un array de enteros con las siguientes 5 velocidades máximas de carrera:
+
+Java
+int[] velocidadesPunta = {312, 325, 308, 317, 330};
+Crea una variable double suma = 0; para acumular las velocidades, y un int contadorExcesos = 0; para registrar cuántas vueltas fue a más de 320 km/h.
+
+Crea un bucle for que recorra todo el array de principio a fin.
+
+Dentro del bucle:
+
+Suma el valor de la casilla actual a tu variable suma (usando +=).
+
+Evalúa con un if: Si la velocidad de la casilla actual es mayor que 320, incrementa tu contadorExcesos++.
+
+Al salir del bucle:
+
+Calcula la media: double media = suma / velocidadesPunta.length; (puedes usar el número 5 a mano si lo prefieres).
+
+Imprime los resultados con el formato limpio que te caracteriza:
+
+El promedio de velocidad punta del coche (con un decimal).
+
+El número de vueltas en las que se superaron los 320 km/h.
+
+📂 Tu rutina en la terminal:
+Sube un nivel: cd ..
+
+Crea la carpeta: mkdir 14_Analisis_Array
+
+Genera el archivo: cd 14_Analisis_Array && touch Main.java
+
+Aplica el ajuste del índice en el Reto 13 si quieres dejarlo niquelado y ¡directo a por la telemetría del Reto 14, Gago!
