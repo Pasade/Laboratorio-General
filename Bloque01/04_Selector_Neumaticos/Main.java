@@ -16,7 +16,7 @@ public class Main{
             if(temperaturaPista > 30){
                 System.out.println("Compuesto Duro (Hard)");
             }
-            else if(temperaturaPista >= 15 && temperaturaPista =< 30){
+            else if(temperaturaPista >= 15 && temperaturaPista <= 30){
                 System.out.println("Compuesto Medio (Medium)");
             }
             else if(temperaturaPista < 15){
