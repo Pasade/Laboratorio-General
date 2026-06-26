@@ -1,0 +1,46 @@
+🔁 El Secreto de las Matrices: Los Bucles Anidados
+Para recorrer una matriz completa, un solo bucle for no es suficiente. Necesitamos una combinación de dos bucles for, uno metido dentro del otro:
+
+El bucle externo controla en qué fila estamos parados.
+
+El bucle interno recorre todas las columnas de esa fila antes de saltar a la siguiente.
+
+Estructuralmente se ve así:
+
+Java
+for (int i = 0; i < 2; i++) {       // Recorre las filas
+    for (int j = 0; j < 2; j++) {   // Recorre las columnas de la fila actual
+        // Aquí usamos matriz[i][j]
+    }
+}
+Reto 16: La Pantalla de Tiempos Total (Recorrer Matrices) 🏎️📺
+Vamos a emular el monitor de tiempos del box. Queremos mostrar en la pantalla los tiempos de 2 pilotos durante 3 vueltas seguidas, de forma organizada.
+
+📋 El Objetivo
+Utilizar bucles anidados para recorrer una matriz bidimensional completa e imprimir su contenido de manera estructurada.
+
+⚙️ Lógica que debes programar
+En tu método main, declara la siguiente matriz de tipo double[][] con los tiempos de 2 coches en 3 vueltas (tabla de 2 filas x 3 columnas):
+
+Java
+double[][] tiemposGrid = {
+    {72.5, 71.9, 72.1}, // Fila 0: Piloto 1 (Vuelta 1, 2, 3)
+    {73.1, 72.8, 73.0}  // Fila 1: Piloto 2 (Vuelta 1, 2, 3)
+};
+Crea un bucle for externo (usa la variable i) que vaya desde 0 hasta < 2 (para las filas de los pilotos).
+
+Dentro, crea un bucle for interno (usa la variable j) que vaya desde 0 hasta < 3 (para las columnas de las vueltas).
+
+Dentro del bucle interno, imprime el tiempo de cada casilla usando printf con este formato:
+"🏎️ Piloto %d | Vuelta %d: %.1f s%n"
+
+💡 Truco para el ojo humano: Recuerda sumarle 1 tanto a i como a j solo dentro del printf (i + 1 y j + 1) para que en la terminal no ponga "Piloto 0 | Vuelta 0", sino "Piloto 1 | Vuelta 1".
+
+📂 Tu rutina en la terminal:
+Sube un nivel: cd ..
+
+Crea la carpeta: mkdir 16_Recorrer_Matriz
+
+Genera el archivo: cd 16_Recorrer_Matriz && touch Main.java
+
+Móntalo con calma y visualiza cómo la i se queda clavada en 0 mientras la j avanza (0, 1, 2) antes de que la i pase a valer 1. ¡A por ello!
