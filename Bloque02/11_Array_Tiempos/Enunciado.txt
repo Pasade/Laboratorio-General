@@ -1,0 +1,41 @@
+🧭 BLOQUE 2: Estructuras de Datos y Colecciones (Arrays)
+En el primer bloque aprendimos a manejar datos sueltos (un entero para la vuelta, un double para el combustible...). Pero, ¿qué pasa si en vez de un piloto queremos guardar los tiempos de los 20 pilotos de la parrilla? Crear 20 variables independientes (tiempo1, tiempo2...) sería una locura.
+
+Para eso nacen los Arrays (Arreglos o Vectores): estructuras capaces de almacenar una colección de elementos del mismo tipo bajo un único nombre.
+
+💡 Conceptos clave que necesitas apuntar antes de picar código:
+El tamaño es fijo: Cuando creas un Array en Java, tienes que decirle cuántas "casillas" va a tener, y ese tamaño ya no se puede cambiar.
+
+Empiezan en CERO: La primera posición de un Array no es la 1, es la posición 0. Si tu array tiene 5 elementos, las casillas se numeran del 0 al 4.
+
+Reto 11: La Tabla de Tiempos de Clasificación (Mi primer Array) ⏱️🏎️
+Vamos a simular la tabla de tiempos de la Q3. Guardaremos los mejores tiempos en segundos de una tanda de vueltas.
+
+📋 El Objetivo
+Aprender a declarar un Array con valores iniciales y acceder a posiciones concretas utilizando sus índices.
+
+📥 Lógica que debes programar
+Crea un nuevo proyecto. Dentro de tu Main, declara un array de tipo double que contenga los siguientes 4 tiempos de clasificación: 72.4, 72.8, 73.1, y 74.0.
+
+En Java, un array con datos predefinidos se declara así:
+
+Java
+double[] tiempos = {72.4, 72.8, 73.1, 74.0};
+Tu programa debe hacer exactamente tres cosas en la terminal usando System.out.println o printf:
+
+Imprimir el tiempo del primer coche de la lista (recuerda qué índice usa).
+
+Imprimir el tiempo del tercer coche de la lista.
+
+Modificar el tiempo del segundo coche (cambiar el 72.8 por un 72.1) e imprimir un mensaje que diga: "¡Vuelta mejorada para el coche 2: 72.1s!".
+
+📂 Tu rutina limpia en la terminal:
+Como cambiamos de bloque, vamos a organizar bien el árbol de carpetas.
+
+Sal de la carpeta del jefe final: cd ..
+
+Si quieres, puedes crear una carpeta general para este bloque o meterlo directamente en la raíz de tu laboratorio: mkdir 11_Array_Tiempos
+
+Entra y genera tu archivo: cd 11_Array_Tiempos && touch Main.java
+
+¿Preparado para domar las colecciones de datos? ¡Al lío, Gago!
