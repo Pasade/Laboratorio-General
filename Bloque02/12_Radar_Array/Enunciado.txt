@@ -1,0 +1,34 @@
+Reto 12: El Radar de Velocidad de Boxes (Arrays Vacíos y Bucles) 🏎️📟
+Cuando los coches entran al Pit Lane, un radar mide su velocidad en diferentes puntos para comprobar que no se saltan el límite (que suele ser 80 km/h).
+
+📋 El Objetivo
+Aprender a declarar un Array vacío con un tamaño fijo, rellenarlo usando un bucle for junto con el objeto Scanner, y luego recorrerlo para mostrar los datos.
+
+📥 Cómo se declara un Array vacío
+Si queremos un array para guardar 3 velocidades (números enteros int) pero aún no sabemos cuáles son, se crea así:
+
+Java
+int[] velocidades = new int[3]; // Crea 3 casillas vacías (todas empiezan valiendo 0)
+⚙️ Lógica que debes programar
+Importa la clase Scanner y crea el objeto teclado dentro del main.
+
+Declara el array vacío int[] velocidades = new int[3];.
+
+Crea un bucle for para pedir las velocidades al usuario por consola. El bucle debe ir desde i = 0 hasta i < 3 (o i < velocidades.length).
+
+Dentro del bucle, muestra el mensaje: "Introduce la velocidad de la medición " + (i + 1) + ": ".
+
+Guarda el número que meta el usuario directamente en la casilla del array: velocidades[i] = teclado.nextInt();.
+
+Justo debajo, crea otro bucle for independiente para mostrar el informe final. Debe recorrer el array e imprimir por cada casilla:
+
+"Medición " + (i + 1) + ": " + velocidades[i] + " km/h".
+
+📂 Tu rutina en la terminal:
+Sube un nivel para salir del ejercicio anterior: cd ..
+
+Crea la nueva carpeta: mkdir 12_Radar_Array
+
+Crea el archivo: cd 12_Radar_Array && touch Main.java
+
+Móntalo con calma, mete tres velocidades en tu terminal (por ejemplo: 78, 82, 79) y veamos cómo ese array dinámico guarda y recupera la información. ¡A por ello!
