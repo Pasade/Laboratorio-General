@@ -1,0 +1,32 @@
+Reto 6: El Asistente de Modos de Motor (ERS) 🔋🏎️
+Los volantes de Fórmula 1 tienen un dial específico para cambiar los mapas de motor y la entrega de potencia eléctrica del ERS (Sistema de Recuperación de Energía).
+
+📋 El Objetivo
+Sustituir una cadena larga de if/else utilizando una estructura switch. Evaluaremos la posición de un dial numérico (int) para configurar el comportamiento del coche.
+
+📥 Variables de entrada (Crea un nuevo proyecto)
+int modoDial = 3; (Puede ser 1, 2, 3 o 4).
+
+⚙️ Lógica que debes programar con switch
+Dependiendo del número del dial, tu programa debe imprimir el estado del motor:
+
+case 1: Imprime "Modo Ahorro (Lean): Reducción de potencia, conservando gasolina."
+
+case 2: Imprime "Modo Carrera (Base): Equilibrio óptimo para carrera."
+
+case 3: Imprime "Modo Ataque (Overtake): Máxima potencia eléctrica para adelantamientos."
+
+case 4: Imprime "Modo Clasificación (Qualy): Todo al mapa extremo. Desgaste máximo."
+
+default (si ponen cualquier otro número): Imprime "Dial erróneo. Configuración de motor por defecto."
+
+💡 Recordatorio Pro: No olvides poner el comando break; al final de cada case. Si se te olvida, Java seguirá ejecutando los modos de abajo en cascada.
+
+📂 Tu rutina en la terminal:
+Sube un nivel para salir del ejercicio anterior: cd ..
+
+Crea la nueva carpeta: mkdir 06_Modos_Motor
+
+Entra y crea el archivo: cd 06_Modos_Motor && touch Main.java
+
+Monta tu primer switch en este nuevo archivo, guárdalo y lánzame la captura o el código para ver cómo ruge ese motor en el modo 3. ¡A por ello, estratega!
