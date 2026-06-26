@@ -1,0 +1,27 @@
+🏎️ ¡Arrancamos la Fase 3: Bucles y Repeticiones! 🔄
+Entramos en la fase donde hacemos que el ordenador trabaje de verdad repitiendo tareas a toda velocidad. Vamos a dominar los bucles for, while y do-while.
+
+Para inaugurar esta fase, nos vamos a poner en la piel del ingeniero que calcula la cuenta atrás en la parrilla de salida.
+
+Reto 7: La Cuenta Atrás y el Semáforo de Salida 🔴🚦
+Antes de que empiece la carrera, los cinco semáforos rojos se van encendiendo uno a uno, y cuando se apagan... ¡arrancamos!
+
+📋 El Objetivo
+Utilizar un bucle for para realizar una cuenta atrás numérica en la terminal y simular el apagado de las luces.
+
+⚙️ Lógica que debes programar
+Queremos un bucle que empiece en 5 y vaya bajando de uno en uno hasta llegar a 1. En cada iteración del bucle, debe imprimir el número actual.
+
+Cuando el bucle termine (es decir, cuando ya haya salido del bloque), el programa debe imprimir por consola el mensaje: "¡SE APAGAN LOS SEMÁFOROS Y ARRANCA EL GRAN PREMIO!"
+
+💡 Pista Pro: Para que un bucle for vaya hacia atrás en lugar de sumar (i++), se utiliza el operador de decremento: i--. La estructura se vería algo así:
+for (int i = 5; i >= 1; i--)
+
+📂 Tu rutina limpia en la terminal:
+Sube un nivel para salir del mapa de motores: cd ..
+
+Crea la nueva carpeta para estrenar fase: mkdir 07_Semoforo_For
+
+Entra y crea el archivo: cd 07_Semoforo_For && touch Main.java
+
+Monta este primer bucle hacia atrás, compílalo y veamos cómo se enciende esa salida. ¡A por la Fase 3!
