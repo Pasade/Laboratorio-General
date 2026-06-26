@@ -1,0 +1,75 @@
+👾 EL JEFE FINAL DEL BLOQUE 1: El Simulador de Carrera Interactivo 🏎️🏁
+Como bien decía el plan de asalto original, ha llegado el momento de medirte contra El Jefe Final. Vamos a fusionar Sintaxis, Operadores, Condicionales, Bucles y el objeto Scanner en un único programa interactivo por consola.
+
+📋 El Objetivo
+Crear un simulador donde el usuario controle el progreso de un monoplaza en carrera vuelta a vuelta a través de un menú interactivo.
+
+⚙️ Lógica que debes programar
+Variables iniciales:
+
+int vueltaActual = 1;
+
+double combustible = 30.0;
+
+double desgasteNeumaticos = 0.0; (Empiezan nuevos, al 0%).
+
+Un objeto Scanner para leer las decisiones del piloto.
+
+El Bucle Principal (while o do-while):
+El simulador debe correr mientras el combustible sea mayor que 0 Y el desgaste de neumáticos sea menor que 100.
+
+Dentro del bucle (En cada vuelta):
+
+Muestra el estado actual con printf: "Vuelta: %d | Combustible: %.1f L | Desgaste: %.1f%%%n" (Nota: para pintar el símbolo de porcentaje en un printf, se pone doble %%).
+
+Muestra un menú de opciones al piloto en la consola:
+
+1. Continuar rodando a ritmo normal.
+
+2. Atacar (Ir más rápido gastando más coche).
+
+3. Entrar a Boxes (Repostar y cambiar ruedas).
+
+Pide al usuario que introduzca su opción (1, 2 o 3).
+
+Evalúa la opción elegida usando un switch:
+
+case 1 (Ritmo Normal): * El combustible baja 4.0 litros.
+
+El desgaste sube un 10.0%.
+
+Avanza una vuelta (vueltaActual++).
+
+case 2 (Atacar): * El combustible baja 7.0 litros (¡gasta más!).
+
+El desgaste sube un 22.0% (¡sufren más las gomas!).
+
+Imprime: "¡Modo ataque activado! Exprimiendo el motor."
+
+Avanza una vuelta (vueltaActual++).
+
+case 3 (Boxes): * El combustible vuelve a subir a 30.0 litros.
+
+El desgaste vuelve a bajar al 0.0%.
+
+Imprime: "¡Parada perfecta! Coche como nuevo. Volvemos a pista."
+
+(En boxes no se avanza de vuelta, se gastan los mecánicos).
+
+default: * Imprime "¡Te has salido de la pista por no elegir una opción válida!"
+
+Mensaje de Fin de Carrera (Fuelta del bucle):
+Si el bucle termina, evalúa con un if/else:
+
+Si terminó porque el combustible es <= 0, imprime: "💀 ¡FIN DE CARRERA! Te has quedado sin gasolina en mitad de la pista."
+
+Si terminó porque el desgaste llegó a >= 100, imprime: "💥 ¡ACCIDENTE! Un neumático ha reventado por estirar demasiado la vida útil."
+
+📂 Tu rutina en la terminal:
+Sube un nivel para salir de las mantas: cd ..
+
+Crea la carpeta definitiva del bloque: mkdir 10_Jefe_Final
+
+Entra y crea el archivo: cd 10_Jefe_Final && touch Main.java
+
+Este es el examen definitivo del laboratorio, Gago. Tómate tu tiempo, diseña la estructura con calma, recuerda importar el Scanner arriba del todo y ¡vamos a ver si consigues pasar por la bandera de cuadros intacto! ¿Estás listo?
