@@ -1,0 +1,20 @@
+🟡 BLOQUE 2: ESTRUCTURAS DE ALMACENAMIENTO LOCAL Y CONTROL DE CÓDIGO (Gestión de Memoria)
+🟡 Fase 4: Arrays Estáticos e Indexación (Vectores y Matrices)
+Qué aprenderemos:
+Definición física de un Array en memoria: Espacios contiguos y tamaño fijo inmutable.
+Declaración e inicialización de arrays unidimensionales de primitivos y de String.
+La regla del índice cero: Acceso, modificación y control estricto del límite del array para evitar el temido error ArrayIndexOutOfBoundsException.
+Arrays bidimensionales (Matrices): Tablas complejas por filas y columnas (esencial para mapas de estadios o cuadrantes de turnos).
+🟡 Fase 5: Algoritmia, Recorridos y Filtrado de Datos
+Qué aprenderemos:
+Bucles optimizados: Estructura del bucle for-each (bucle mejorado) para lectura rápida.
+Algoritmos de búsqueda lineal y búsqueda binaria dentro de colecciones.
+Algoritmos de ordenación básicos (como el método de la burbuja o Bubble Sort).
+Lógica de filtrado: Cómo extraer datos específicos de una lista bajo condiciones lógicas (ej. contar cuántos accesos válidos hay en una lista).
+🟡 Fase 6: Control de Versiones Profesional (Git y GitHub)
+Qué aprenderemos:
+Fundamentos del control de versiones: Qué es un repositorio local y un área de preparación (Staging Area).
+Comandos esenciales en consola: git init, git status, git add, git commit -m.
+Gestión de ramas (git branch, git checkout, git merge): Cómo trabajar en una funcionalidad nueva sin romper el programa estable.
+Resolución técnica de conflictos cuando dos personas (o tú mismo desde distintos ordenadores) modifican la misma línea de código.
+Trabajo en la nube: Conectar tu repositorio local con GitHub (git push, git pull) para asegurar tu código y tener tu portafolio listo.
