@@ -1,0 +1,47 @@
+🏁 EL JEFE FINAL DEL BLOQUE 2: El Gran Premio Automatizado 🏎️🏆
+Para demostrar que dominas los Arrays y las Matrices, vas a programar un simulador que gestione la carrera completa de 3 pilotos a lo largo de 3 vueltas. Tendrás que combinar todo lo aprendido: guardar datos en una tabla, recorrerlos, acumular totales y filtrar información.
+
+📋 El Objetivo
+Gestionar una matriz de tiempos, calcular los totales de carrera de cada piloto y determinar de forma automática quién ha ganado.
+
+⚙️ Lógica que debes programar
+La Matriz de Tiempos: Declara una matriz double[][] tiemposCarrera de 3x3 (3 coches, 3 vueltas) con estos tiempos predefinidos en segundos:
+
+Java
+double[][] tiemposCarrera = {
+    {72.5, 71.8, 73.2}, // Coche 1
+    {73.1, 72.0, 71.5}, // Coche 2
+    {71.9, 74.1, 72.8}  // Coche 3
+};
+El Procesamiento (Bucles Anidados):
+
+Necesitas encontrar quién es el ganador de la carrera. Para ello, el coche ganador será el que tenga el tiempo total más bajo al sumar sus 3 vueltas.
+
+Crea una variable double tiempoGanador = 9999.9; (un número muy alto para poder registrar el primer mínimo) y un int cocheGanador = 0;.
+
+Recorre la matriz con un bucle exterior para los coches (i) y un bucle interior para las vueltas (j).
+
+Dentro del bucle de cada coche (pero antes de sus vueltas): Crea un acumulador double tiempoTotalCoche = 0;.
+
+Dentro del bucle de las vueltas: Ve sumando el tiempo de cada vuelta: tiempoTotalCoche += tiemposCarrera[i][j];.
+
+Al salir del bucle de las vueltas (pero aún dentro del coche):
+
+Imprime el tiempo total de ese coche con printf (ej: "Coche %d - Tiempo Total: %.2fs%n").
+
+Compara: Si tiempoTotalCoche es menor que tiempoGanador, actualiza tu tiempoGanador = tiempoTotalCoche; y guarda el índice real del coche cocheGanador = i;.
+
+El Desenlace: Al salir de todos los bucles, imprime con un formato épico quién se lleva la victoria:
+
+"🏆 ¡VICTORIA! El Coche %d gana el Gran Premio con un tiempo total de %.2fs" (aplicando el + 1 al coche solo en el printf).
+
+📂 Tu rutina en la terminal:
+Sube un nivel: cd ..
+
+Crea la carpeta definitiva del bloque: mkdir 19_Jefe_Final_Bloque2
+
+Genera tu archivo: cd 19_Jefe_Final_Bloque2 && touch Main.java
+
+Móntalo, compílalo y lánzalo. Antes de que pases a enviarme la captura de este jefe final, frena aquí. No me des todavía el código del Bloque 3; ponme primero las directrices de aprendizaje que me ibas a dar para que las configure en mi sistema antes de dar el salto de nivel.
+
+¡A por el jefe final, Gago!
