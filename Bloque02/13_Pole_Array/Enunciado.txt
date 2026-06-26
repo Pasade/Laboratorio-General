@@ -1,0 +1,40 @@
+Reto 13: El Buscador de la Pole Position (Algoritmos con Arrays) 🏎️🥇
+Ahora que ya sabes rellenar y recorrer un array, vamos a subir el nivel de exigencia lógica. Vamos a programar nuestro primer algoritmo de búsqueda.
+
+En la clasificación, los coches van marcando tiempos. Al terminar la sesión, el ordenador tiene que revisar todos los tiempos guardados para descubrir quién ha sido el más rápido (el tiempo más bajo) y llevarse la Pole Position.
+
+📋 El Objetivo
+Recorrer un array de tiempos para encontrar de forma automática el número más pequeño y en qué posición de la parrilla estaba.
+
+⚙️ Lógica que debes programar
+Crea un array de tipo double con estos 5 tiempos ya predefinidos:
+
+Java
+double[] tiemposQ3 = {73.5, 72.2, 74.1, 71.9, 72.8};
+Para encontrar el mínimo, necesitamos dos variables auxiliares justo antes de empezar a buscar:
+
+double tiempoMasRapido = tiemposQ3[0]; (Asumimos de primeras que el primero es el mejor).
+
+int cocheMasRapido = 0; (Guardará el índice del coche que ha hecho ese tiempazo).
+
+Crea un bucle for que empiece en i = 1 (porque el 0 ya lo tenemos guardado en la variable de arriba) y vaya hasta el final del array (i < 5 o i < tiemposQ3.length).
+
+El Filtro Lógico (if): Dentro del bucle, tienes que comparar el tiempo de la casilla actual con nuestro récord provisional:
+
+Si tiemposQ3[i] es MENOR que tiempoMasRapido... ¡Tenemos nuevo líder!
+
+Actualiza las dos variables auxiliares con los datos de esa casilla i.
+
+Al salir del bucle, imprime el resultado por consola usando printf:
+"🏎️ ¡POLE POSITION! El coche número %d se lleva la pole con un tiempo de %.3f segundos.%n"
+
+💡 Ojo al dato: Para que el número de coche sea más natural para los humanos, al imprimir el índice súmale 1 (cocheMasRapido + 1), así no diremos que ganó el "coche 0" sino el "coche 1".
+
+📂 Tu rutina en la terminal:
+Sube un nivel: cd ..
+
+Crea la carpeta: mkdir 13_Pole_Array
+
+Genera el archivo: cd 13_Pole_Array && touch Main.java
+
+Móntalo con calma. Este ejercicio ya requiere pensar cómo la máquina procesa la información casilla a casilla. ¡A por la pole, Gago!
