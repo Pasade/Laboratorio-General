@@ -1,0 +1,32 @@
+Reto 5: El Sistema de Banderas de Sanción 🚦🏁
+En la F1, los comisarios de la FIA utilizan banderas de colores para comunicarse con los pilotos según lo que pase en la pista. Vamos a programar el sistema automático que asigna el nivel de peligro y la acción requerida.
+
+📋 El Objetivo
+Practicar con condicionales else if en cadena y comparaciones de cadenas de texto (String).
+
+⚠️ ¡Cuidado, que aquí hay trampa de Java! Para comparar si dos textos son iguales, no se usa ==. Se utiliza el método .equals(). Por ejemplo: if (colorBandera.equals("ROJA")).
+
+📥 Variables de entrada (Crea un nuevo proyecto)
+String colorBandera = "AMARILLA"; (Puede ser "VERDE", "AMARILLA", "ROJA" o "NEGRA").
+
+⚙️ Lógica que debes programar
+Tu programa debe evaluar el color de la bandera y mostrar el mensaje correspondiente por consola:
+
+Si es "VERDE": Imprime "Pista libre. ¡Acelerar!"
+
+Si es "AMARILLA": Imprime "Peligro en pista. Reducir velocidad y prohibido adelantar."
+
+Si es "ROJA": Imprime "Sesión suspendida. Todos los coches entran al Pit Lane inmediatamente."
+
+Si es "NEGRA": Imprime "Piloto descalificado. Entrada a boxes obligatoria."
+
+Si ponen cualquier otra cosa (un color inventado): Imprime "Bandera no reconocida. Consultar con el muro." (Usa el else final para esto).
+
+📂 Tu rutina limpia en la terminal:
+Sube un nivel en tu terminal para salir del selector de neumáticos.
+
+Crea la carpeta 05_Sistema_Banderas.
+
+Crea el Main.java dentro.
+
+¿Te animas a probar la comparación con .equals() a ver si lo domas a la primera? ¡Al lío!
