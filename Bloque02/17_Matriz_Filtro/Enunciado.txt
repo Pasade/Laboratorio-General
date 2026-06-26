@@ -1,41 +1,37 @@
-Reto 17: El Buscador de Infracciones en Pista (Matrices + Filtros) 🏎️🏁🚨
-Para cerrar la sección de matrices con matrícula de honor, vamos a juntar el recorrido de una matriz con un filtro lógico de control (un if).
-
-En una carrera, los comisarios revisan los límites de pista. Si un piloto se sale de las líneas blancas 3 veces o más, le cae una sanción de tiempo. Vamos a auditar los datos del fin de semana.
+Reto 17: Matriz Filtro (Control de Neumáticos Críticos) 🏎️⚠️
+El equipo de ingenieros te ha pedido una herramienta para monitorizar el desgaste de los neumáticos de 3 coches durante 4 vueltas de simulación (una matriz de 3x4). Quieren saber exactamente en qué momentos el desgaste superó un umbral peligroso (80%), ya que a partir de ahí hay riesgo de reventón.
 
 📋 El Objetivo
-Recorrer una matriz completa que guarda las infracciones de los pilotos y contar de forma automática quiénes han superado el límite permitido.
+Recorrer una matriz completa usando bucles anidados (for dentro de for) y aplicar un filtro condicional para reportar solo las posiciones que superan un valor límite.
 
 ⚙️ Lógica que debes programar
-En tu método main, declara la siguiente matriz de tipo int[][] que registra el número de veces que 3 pilotos se han salido de pista en 3 sesiones distintas (Libres, Clasificación y Carrera). Es una tabla de 3x3:
+En tu método main, declara la siguiente matriz de tipo int[][] que contiene el desgaste de 3 coches a lo largo de 4 vueltas:
 
 Java
-int[][] infraccionesGrid = {
-    {1, 0, 2}, // Piloto 1 (Sesión 1, 2, 3) -> Total: 3 infracciones
-    {0, 1, 1}, // Piloto 2 (Sesión 1, 2, 3) -> Total: 2 infracciones
-    {2, 3, 0}  // Piloto 3 (Sesión 1, 2, 3) -> Total: 5 infracciones
+int[][] telemetriaNeumaticos = {
+    {20, 45, 65, 82},  // Fila 0: Coche 1
+    {15, 35, 78, 90},  // Fila 1: Coche 2
+    {30, 60, 85, 95}   // Fila 2: Coche 3
 };
-Queremos saber el total acumulado de infracciones de cada piloto a lo largo de las 3 sesiones.
+Imprime un encabezado limpio en la consola: "--- ALERTA DE DESGASTE CRÍTICO (>80%) ---".
 
-Para lograrlo, tu bucle externo for (el de las filas i) representará a cada piloto.
+Crea dos bucles for anidados para revisar cada casilla de la tabla:
 
-Justo antes de entrar al bucle interno, crea una variable acumuladora: int totalPiloto = 0;. De esta forma, cada vez que saltemos a un nuevo piloto, la cuenta se reiniciará a cero.
+El bucle exterior recorrerá las filas (int c = 0; c < 3; c++).
 
-El bucle interno for (el de las columnas j) sumará las infracciones de sus 3 sesiones a la variable totalPiloto.
+El bucle interior recorrerá las columnas/vueltas (int v = 0; v < 4; v++).
 
-Al salir del bucle interno (pero todavía dentro del bucle externo), evalúa con un if:
+El Filtro (if): Dentro del bucle interior, evalúa si el valor de la casilla actual es mayor que 80.
 
-Si el totalPiloto es mayor o igual a 3, imprime un aviso de penalización:
-"🚨 Piloto %d acumula %d infracciones. ¡AVISO DE SANCIÓN DE 5 SEGUNDOS!%n"
+Si es verdadero, imprime un reporte con printf indicando qué coche y en qué vuelta se ha detectado el peligro.
 
-Si es menor, imprime un mensaje limpio:
-"✅ Piloto %d acumula %d infracciones. Todo en regla.%n"
+Recuerda la regla de oro: Súmale 1 a las variables al imprimirlas para que de cara al usuario se vea de forma natural (Coche 1, Vuelta 4...) y no con los índices de programación (Coche 0, Vuelta 3).
 
 📂 Tu rutina en la terminal:
-Sube un nivel: cd ..
+Asegúrate de estar en tu carpeta del bloque 2: cd .. (si estás dentro de otra).
 
-Crea la carpeta: mkdir 17_Matriz_Filtro
+Entra en la carpeta del ejercicio (o créala si no existe): cd 17_Matriz_Filtro
 
-Genera el archivo: cd 17_Matriz_Filtro && touch Main.java
+Si está vacía, crea tu archivo: touch Main.java
 
-Este ejercicio te obliga a pensar con precisión quirúrgica dónde declarar la variable que suma para que no arrastre los datos del piloto anterior. ¡A por la última bandera de cuadros del bloque de matrices, Gago!
+Móntalo, lánzale el javac Main.java y pásame la captura para ver cómo ese filtro caza los desgastes críticos en la pista. ¡A por ello, que lo tienes dominado!
