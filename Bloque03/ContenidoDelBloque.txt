@@ -1,0 +1,83 @@
+📦 BLOQUE 3: Programación Orientada a Objetos (POO)
+Dejamos atrás la programación estructurada pura donde los datos flotaban en variables sueltas. En el mundo real (y en tu Gestor de Almacenes), las cosas no son solo números o textos; son Objetos con características y acciones propias.
+
+A lo largo de este bloque estructuraremos el aprendizaje en 3 Fases antes de llegar al gran Jefe Final:
+
+🗺️ Hoja de Ruta del Bloque 3
+Fase 1: Clases, Objetos y Encapsulamiento (Donde estamos)
+
+Concepto de molde (Clase) vs. copia real (Objeto).
+
+Atributos, constructores y métodos de acceso (getters y setters).
+
+Modificadores de acceso: private y public (Encapsulamiento).
+
+Fase 2: Relaciones entre Objetos y Modularización
+
+Cómo un objeto interactúa con otro (un Pasillo que contiene estanterías, una Estantería que contiene paquetes).
+
+Pasar lógica a métodos auxiliares para limpiar el main.
+
+Fase 3: Colecciones Dinámicas (ArrayList)
+
+Rompemos la limitación del tamaño fijo de los arrays clásicos para poder añadir y eliminar elementos de forma infinita.
+
+💡 Fase 1: Clases, Objetos y Encapsulamiento
+Para entender la POO, imagínate una fábrica de cajas de embalaje para tu almacén.
+
+La Clase: Es el plano de diseño de la caja. En el plano se define que toda caja debe tener un código tracking, un peso y un estado (pero el plano en sí no pesa nada ni ocupa espacio en el inventario).
+
+El Objeto (Instancia): Es la caja real de cartón fabricada siguiendo ese plano. Puedes fabricar 500 cajas; cada una ocupará un lugar físico en la memoria y tendrá su propio peso y su propio código.
+
+🛡️ El Encapsulamiento (private)
+En un almacén, tú no dejas que cualquiera entre a pintar encima de las etiquetas de los paquetes. Si alguien quiere cambiar el peso o el código de una caja, tiene que pasar por un control.
+
+En Java, esto se hace marcando los atributos como private. Nadie fuera de esa clase puede modificarlos directamente (paquete.peso = -50; ❌ daría error). Para leer o alterar esos valores de forma segura, se crean métodos públicos especiales:
+
+getters: Métodos para leer el valor (ej: getPeso()).
+
+setters: Métodos para modificar el valor bajo tus reglas (ej: setPeso(double nuevoPeso)).
+
+📥 Ejemplo enfocado en nuestro repositorio: laboratorio-java-bloque3
+Para ver cómo se traduce esto a código real, fíjate en cómo diseñaríamos una clase básica para representar un producto dentro del almacén:
+
+Java
+// El molde o plano
+public class Producto {
+    // 1. Atributos ocultos y protegidos
+    private String id;
+    private int stock;
+
+    // 2. Constructor: El "botón" para fabricar el objeto real con datos iniciales
+    public Producto(String idInicial, int stockInicial) {
+        this.id = idInicial;
+        this.stock = stockInicial;
+    }
+
+    // 3. Getter para permitir que se consulte el stock
+    public int getStock() {
+        return this.stock;
+    }
+
+    // 4. Setter para modificar el stock de forma controlada
+    public void setStock(int nuevoStock) {
+        if (nuevoStock >= 0) { // Regla de control: ¡No permitimos stock negativo!
+            this.stock = nuevoStock;
+        }
+    }
+}
+¿Cómo se usaría este molde dentro del método main principal de una aplicación? Así de sencillo:
+
+Java
+public class Main {
+    public static void main(String[] args) {
+        // Fabricamos un objeto real (Instanciación)
+        Producto p1 = new Producto("PROD-001", 50);
+
+        // Modificamos el stock usando el canal oficial
+        p1.setStock(42);
+
+        // Consultamos el valor real en la terminal
+        System.out.println("Stock actual del producto: " + p1.getStock());
+    }
+}
