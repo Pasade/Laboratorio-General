@@ -1,0 +1,40 @@
+🏢 FASE 1 - Ejercicio 1: El Sistema de Fichajes (Control de Empleados)
+Para romper el hielo con la POO de forma independiente a la app principal, vamos a diseñar un módulo de Recursos Humanos para gestionar el personal de una empresa tecnológica.
+
+📋 El Objetivo
+Crear una estructura encapsulada para representar a un Empleado, forzando que el salario de los trabajadores pase por una regla de control estricta (no puede haber sueldos inferiores al Salario Mínimo).
+
+⚙️ Lógica que debes programar
+La Clase Molde (Empleado.java):
+
+Crea tres atributos con acceso privado: private String nombre;, private String puesto; y private double salario;.
+
+Crea un Constructor que reciba los tres parámetros para inicializar el objeto al fabricarlo (nombre, puesto, salario).
+
+Genera los getters y setters para los tres atributos.
+
+Filtro de seguridad en el Setter del Salario: Dentro de setSalario(double nuevoSalario), añade una condición: Si el salario introducido es menor que 1000.0, el sistema no debe aplicar el cambio e imprimirá por pantalla: "❌ ERROR: El salario no puede ser inferior al mínimo legal (1000€).". Si es correcto, se actualiza.
+
+Crea un método público llamado public void mostrarInfo() que imprima los detalles completos del empleado con un formato limpio en consola.
+
+La Clase Ejecutora (Main.java):
+
+Dentro del método main, crea tu primer empleado (ej: nombre: "Gago", puesto: "Desarrollador Java", salario: 1800.0).
+
+Ejecuta su método mostrarInfo() para comprobar que se ha creado correctamente.
+
+Prueba de estrés del filtro: Intenta bajarle el sueldo a 600.0 usando el método setSalario(). Verifica que salta el mensaje de error de tu regla de control.
+
+Vuelve a ejecutar mostrarInfo() para demostrar que el salario inicial se ha mantenido a salvo y no ha sido alterado de forma ilegal.
+
+📂 Tu rutina en la terminal:
+Posiciónate en tu carpeta del Bloque 3 de Laboratorio-General:
+cd Bloque03
+
+Crea el directorio para este primer reto:
+mkdir 20_Control_Empleados
+
+Entra y genera los dos archivos necesarios para este ejercicio:
+cd 20_Control_Empleados && touch Empleado.java Main.java
+
+Dale una vuelta en el camino al trabajo a cómo estructurar ese if dentro del setter para proteger los datos. ¡Buen viaje y a por el Reto 20, Gago!
