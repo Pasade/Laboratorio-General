@@ -1,0 +1,47 @@
+🏎️ FASE 1 - Ejercicio 2: El Registro de Telemetría (Objetos interactuando)
+Vamos a dar un paso al frente. Ahora que controlas la encapsulación de un objeto individual, el siguiente paso clave en la POO es hacer que un objeto interactúe con otro. Para este ejercicio, vamos a simular un sistema básico de telemetría de competición.
+
+📋 El Objetivo
+Crear una estructura donde una clase controladora o de registro (Vuelta) sea capaz de evaluar si un coche ha batido un récord de tiempo establecido.
+
+⚙️ Lógica que debes programar
+La Clase Molde (Vuelta.java):
+
+Atributos privados: private int numeroVuelta; y private double tiempoSegundos;.
+
+Un Constructor que inicialice ambos valores.
+
+Sus correspondientes getters y setters bien estructurados.
+
+Un método público public void mostrarVuelta() que imprima de forma elegante el número de vuelta y su tiempo.
+
+La Clase Evaluadora (AnalizadorCompeticion.java):
+
+Esta clase no necesita atributos, solo actuará como herramienta de control.
+
+Crea un método público y estático llamado public static void verificarRecord(Vuelta vueltaObjeto, double tiempoRecord).
+
+¡Ojo aquí! Fíjate que el primer parámetro que recibe este método no es un número ni un texto... ¡es un objeto de tipo Vuelta!
+
+Lógica del método: Dentro del método, extrae el tiempo de la vuelta usando su getter (vueltaObjeto.getTiempoSegundos()). Compara ese valor con el tiempoRecord.
+
+Si el tiempo de la vuelta es menor, imprime: "⏱️ ¡NUEVO RÉCORD! La vuelta %d ha rebajado el tiempo límite por %.2f segundos.%n".
+
+Si no, imprime: "❌ Vuelta %d completada, pero no supera el récord actual.%n".
+
+La Clase Ejecutora (Main.java):
+
+Dentro del main, define una variable local con el récord de la pista: double recordPista = 85.5; (por ejemplo, 1 minuto y 25.5 segundos).
+
+Crea un objeto Vuelta v1 = new Vuelta(1, 89.2); y pásaselo al analizador: AnalizadorCompeticion.verificarRecord(v1, recordPista);.
+
+Crea un segundo objeto Vuelta v2 = new Vuelta(2, 84.1); y vuelve a verificarlo. Mira cómo responde tu lógica en la terminal.
+
+📂 Tu rutina en la terminal:
+Cuando termines el push, muévete a tu directorio del Bloque 3, crea la nueva carpeta y genera los tres archivos limpios para empezar:
+
+Bash
+cd ..
+mkdir 21_Telemetria_Carreras
+cd 21_Telemetria_Carreras && touch Vuelta.java AnalizadorCompeticion.java Main.java
+Con esto aprenderás a pasar objetos como argumentos a otros métodos, que es el verdadero potencial de diseñar en Java. ¡A por el Reto 21! Cuando tengas el esqueleto o los primeros archivos listos, me avisas.
