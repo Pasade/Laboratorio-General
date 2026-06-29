@@ -1,0 +1,62 @@
+🏎️ FASE 1 - Ejercicio 3: La Escudería de F1 (Colecciones y Retornos)
+Imagínate que eres el ingeniero jefe de una escudería de Fórmula 1 y tienes que gestionar los dos coches del equipo. Necesitamos saber cuál de los dos pilotos está rindiendo mejor en pista.
+
+📋 El Objetivo
+Crear una clase Escuderia que guarde los dos objetos de tipo Vuelta (del ejercicio anterior) y que tenga un método inteligente capaz de comparar ambos coches y devolver directamente el objeto de la vuelta más rápida.
+
+⚙️ Lógica que debes programar
+Reutiliza tu clase Vuelta.java:
+
+No tienes que tocarle absolutamente nada, la dejas tal cual la hiciste en el ejercicio anterior (con su número de vuelta, su tiempo y sus getters).
+
+Crea la Clase Molde (Escuderia.java):
+
+Atributos privados: Esta clase va a tener tres atributos:
+
+private String nombreEscuderia;
+
+private Vuelta coche1; (¡Sí, un atributo que es un objeto Vuelta!)
+
+private Vuelta coche2; (Otro objeto Vuelta para el segundo piloto).
+
+Constructor: Que reciba el nombre de la escudería y los dos objetos Vuelta ya creados para inicializar los atributos.
+
+El método estrella: Crea un método público llamado:
+public Vuelta obtenerVueltaMasRapida()
+
+Ojo a la firma: No es void, no devuelve un double... ¡devuelve un objeto Vuelta completo!
+
+Lógica interna: Compara el tiempo de coche1 contra el de coche2 usando sus getters. El que tenga el menor tiempo gana. Devuelve (return) el objeto del coche ganador completo.
+
+La Clase Ejecutora (Main.java):
+
+Dentro del main, crea dos vueltas con tiempos diferentes (por ejemplo, Hamilton y Russell).
+
+Vuelta vHamilton = new Vuelta(14, 83.2);
+
+Vuelta vRussell = new Vuelta(12, 84.5);
+
+Crea la escudería pasándole esas vueltas:
+
+Escuderia mercedes = new Escuderia("Mercedes", vHamilton, vRussell);
+
+Llama al método para recuperar la vuelta ganadora y guárdala en una nueva variable de tipo Vuelta:
+
+Vuelta masRapida = mercedes.obtenerVueltaMasRapida();
+
+Imprime el resultado por consola usando el método de la propia vuelta ganadora:
+
+System.out.println("El coche más rápido de la escudería ha sido:");
+
+masRapida.mostrarVuelta();
+
+📂 Estructura en la terminal:
+Cuando te vayas a poner a ello (sin prisa, a tu bola), te creas la carpeta del ejercicio, copias el archivo Vuelta.java del ejercicio anterior para no tener que picarlo de nuevo, y creas los otros dos:
+
+Bash
+cd ..
+mkdir 22_Escuderia_F1
+cd 22_Escuderia_F1
+cp ../21_Telemetria_Carreras/Vuelta.java .
+touch Escuderia.java Main.java
+Aquí se queda el enunciado preparado en boxes para cuando tengas tu próximo hueco libre. ¡A ver qué tal se te da hacer que un método devuelva un objeto entero! Si te surge cualquier duda al estructurar los atributos u organizar el return, ya sabes dónde estoy. ¡Buen descanso del código por ahora!
