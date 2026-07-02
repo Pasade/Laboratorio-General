@@ -1,0 +1,43 @@
+🏥 PASO 2.2 - PRÁCTICA UNITARIA 1: El Registro de Pacientes Críticos
+En un hospital de campaña, los pacientes llegan de forma impredecible debido a las emergencias. No podemos usar un array fijo porque no sabemos si hoy vendrán 3 personas o 40. Necesitamos una lista elástica que se adapte en tiempo real.
+
+📋 El Objetivo
+Vas a crear un miniprograma estructurado en dos archivos (Paciente.java y GestionHospital.java) dentro de tu repositorio local laboratorio-general. El objetivo es que domines la declaración de un ArrayList de objetos y su recorrido mediante un bucle For-Each.
+
+⚙️ Lo que debes programar:
+1. La Clase Molde (Paciente.java)
+Crea esta clase con los siguientes componentes:
+
+Atributos privados: String nombre, int edad y String sintoma.
+
+Constructor: Que reciba los tres datos e inicialice los atributos pasando obligatoriamente por sus métodos setter.
+
+Getters y Setters: Para los tres atributos (recuerda que los setters son void).
+
+Método propio: Un método llamado public void mostrarFicha() que imprima los datos formateados de esta manera:
+[PACIENTE] Nombre: Juan | Edad: 45 | Síntoma: Fiebre Alta
+
+2. La Clase Ejecutora (GestionHospital.java)
+Crea este archivo con su método main y realiza lo siguiente:
+
+Paso A: Importa las herramientas ArrayList y List arriba del todo (usando tu optimización de imports).
+
+Paso B: Declara e instancia un ArrayList diseñado únicamente para albergar objetos de tipo Paciente. Llámalo listaDeIngresos.
+
+Paso C: Instancia 3 objetos de tipo Paciente con los datos que tú quieras (por ejemplo: Carlos de 28 años con "Esguince", Ana de 52 con "Dolor de cabeza", etc.).
+
+Paso D: Agrega los 3 pacientes a la lista en una sola línea de código utilizando el combo .addAll(List.of(...)) que acabas de dominar en la teoría.
+
+Paso E: Imprime por consola cuántos pacientes hay ingresados usando el método .size().
+
+Paso F: Mediante un bucle For-Each, recorre la lista completa haciendo que cada paciente ejecute de forma automática su método mostrarFicha().
+
+📂 ¿Cómo preparar tu entorno en la terminal?
+Para no mezclar esto con el gestor de envíos, sube un nivel en tu terminal, crea una carpeta limpia para esta práctica dentro de tu espacio general de trabajo y genera los archivos:
+
+Bash
+cd ..
+mkdir Practica1_Fase8_Hospital
+cd Practica1_Fase8_Hospital
+touch Paciente.java GestionHospital.java
+Tómate tu tiempo para estructurar ambas clases con calma, fíjate bien en las mayúsculas al definir el ArrayList<Paciente> y, cuando lo tengas compilado con javac *.java y funcionando, pásame las capturas de tus archivos y de la terminal para evaluar este primer asalto. ¡A por ello, Jose Antonio!
