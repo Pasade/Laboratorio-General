@@ -1,0 +1,23 @@
+🏥 PASO 2.2 - PRÁCTICA UNITARIA 2: El Triaje y Filtro de Urgencias
+Seguimos en nuestro Hospital de Campaña. Ahora que sabemos registrar pacientes, el director médico nos pide una funcionalidad crítica: el sistema de triaje. No todos los pacientes tienen la misma gravedad, y necesitamos buscar o filtrar dentro de nuestro ArrayList elástico.
+
+📋 El Objetivo
+Vas a evolucionar el código que ya tienes en GestionHospital.java para aprender a interactuar con los objetos que están dentro de la lista utilizando condicionales dentro del bucle. No necesitas tocar para nada Paciente.java.
+
+⚙️ Lo que debes programar en GestionHospital.java:
+Añade código a continuación de lo que ya tienes hecho (después de la línea 19) para cumplir con dos nuevas misiones:
+
+Misión 1: Alerta de Pacientes de Riesgo (Filtro por Edad)
+Los pacientes mayores de 65 años se consideran de alto riesgo. Debes crear un nuevo bucle For-Each que recorra tu listaDeIngresos. Dentro del bucle, añade un condicional if que compruebe la edad del paciente (usando su getter). Si el paciente supera los 65 años, debe imprimir un mensaje de advertencia en rojo o destacado:
+⚠️ ¡ALERTA DE RIESGO! El paciente [Nombre] requiere atención prioritaria por edad ([Edad] años).
+
+Misión 2: Alta Médica Simbólica (Uso de métodos de ArrayList)
+El paciente paciente1 (Luis) ya se encuentra recuperado de su síntoma.
+
+Utiliza el método .remove(...) pasándole directamente el objeto paciente1 para darle el alta del hospital.
+
+Imprime un mensaje informativo indicando que se ha dado un alta.
+
+Vuelve a imprimir el tamaño actual del hospital con .size() para demostrar cómo la lista se ha encogido de forma elástica automáticamente.
+
+Abre tu archivo GestionHospital.java, pícale estas dos ampliaciones por debajo de lo que ya funciona, vuelve a compilar con javac *.java y muéstrame las capturas de cómo responde el hospital en la terminal. ¡A por el segundo asalto!
