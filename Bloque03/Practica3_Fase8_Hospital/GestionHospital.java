@@ -35,5 +35,16 @@ public class GestionHospital{
 
         //Volvemos a mostrar cuantos pacientes hay en la lista
         System.out.println("Hoy hay un total de " + listaDeIngresos.size() + " pacientes");
+
+        System.out.println("🚨 ¡CÓDIGO CERO! Iniciando evacuación total del hospital de campaña...");
+
+        listaDeIngresos.clear();
+
+        if(listaDeIngresos.isEmpty()){
+            System.out.println("✅ Confirmado: El hospital ha sido evacuado con éxito. Pacientes ingresados: 0");
+        }
+        else{
+            System.out.println("❌ ERROR: Todavía quedan pacientes atrapados en las instalaciones.");
+        }
     }
 }
