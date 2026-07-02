@@ -1,0 +1,56 @@
+⚔️ EL JEFE FINAL DEL BLOQUE 3: El Gestor de Boxes (Pit Stop Simulator)
+La escudería necesita optimizar las paradas en boxes. Tu misión es programar un sistema inteligente que controle los neumáticos que se le ponen a un monoplaza en un Pit Stop y determine si la estrategia cumple con las normas de seguridad.
+
+📋 El Objetivo
+Crear un sistema con tres clases (Neumatico, PitStop y Main) donde evalúes de forma dinámica el estado y la legalidad de una parada en boxes.
+
+⚙️ Reglas de negocio y lógica que debes programar
+La Clase Molde (Neumatico.java):
+
+Atributos privados: String compuesto (por ejemplo: "Blando", "Medio", "Duro") y int vidaUtilPorcentaje (un número de 0 a 100 que representa el desgaste).
+
+Constructor: Que inicialice ambos atributos usando obligatoriamente los setters.
+
+Setters con filtro de seguridad:
+
+Si intentan meter una vidaUtilPorcentaje menor que 0 o mayor que 100, fíjalo automáticamente en 0 y lanza un aviso por consola: "⚠️ Alerta: Porcentaje de vida inválido. Configurado en 0%."
+
+Getters: Sus correspondientes métodos de lectura.
+
+La Clase Orquestadora (PitStop.java):
+
+Atributos privados:
+
+private String piloto;
+
+private Neumatico neumaticoIzquierdo; (Objeto de tipo Neumatico)
+
+private Neumatico neumaticoDerecho; (Objeto de tipo Neumatico)
+
+Constructor: Recibe el nombre del piloto y los dos objetos Neumatico para montarlos en el coche.
+
+Método de Control Estratégico (public boolean esParadaSegura()):
+
+Este método no recibe parámetros. Debe devolver un boolean (true o false).
+
+Lógica: Una parada es segura SÓLO si ambos neumáticos tienen una vida útil superior al 40%. Si uno de los dos (o ambos) está al 40% o menos, la estrategia es peligrosa.
+
+Devuelve true si es seguro, o false si no lo es.
+
+La Clase Ejecutora (Main.java):
+
+En el main, simula dos situaciones distintas:
+
+Caso 1 (Estrategia OK): Crea dos neumáticos sanos (ej. 80% y 85%). Crea un PitStop para "Alonso" y comprueba si es seguro. Si el método devuelve true, imprime por consola: "🟢 Pit Stop aprobado para %s. ¡A pista!%n".
+
+Caso 2 (Filtro de peligro): Crea un neumático al límite (ej. 35%) y otro con un valor ilegal para forzar el filtro del constructor (ej. -10%). Crea un PitStop para "Verstappen". Comprueba la seguridad e imprime: "❌ Pit Stop RECHAZADO para %s. Riesgo de pinchazo.%n".
+
+📂 Estructura en la terminal para trabajar:
+Cuando te apetezca ponerte con él, te creas la carpeta específica dentro de tu espacio de trabajo local:
+
+Bash
+cd ..
+mkdir JefeFinal_Gestor_Boxes
+cd JefeFinal_Gestor_Boxes
+touch Neumatico.java PitStop.java Main.java
+Aquí queda blindado el enunciado. Ve por completo a tu bola, asimila bien los conceptos de los setters con condiciones y la devolución del booleano, y me vas pasando las capturas en el orden que prefieras cuando lo tengas listo. ¡A por el jefe del bloque! 🏁🔥
