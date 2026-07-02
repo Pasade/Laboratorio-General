@@ -10,13 +10,16 @@ public class Paciente{
         setSintoma(sintoma);
     }
 
-    //Creamos los setters
+    //Creamos los setters y llos Getters
+    public String getNombre(){return this.nombre;}
     public void setNombre(String nuevoNombre){
         this.nombre = nuevoNombre;
     }
+    public int getEdad(){return this.edad;}
     public void setEdad(int nuevaEdad){
         this.edad = nuevaEdad;
     }
+    public String getSintoma(){return this.sintoma;}
     public void setSintoma(String nuevoSintoma){
         this.sintoma = nuevoSintoma;
     }
