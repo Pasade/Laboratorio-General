@@ -1,0 +1,48 @@
+🏥 PASO 2.3 - EL JEFE FINAL DE FASE: El Panel de Control del Hospital de Campaña
+Para demostrar que dominas por completo la gestión dinámica de datos antes de pasar a evaluar el bloque, vamos a unificar todas las herramientas del ArrayList en un único flujo lógico dentro de tu carpeta del hospital.
+
+📋 El Objetivo
+Vas a crear un nuevo archivo ejecutable llamado JefeFinalHospital.java en la misma carpeta de las prácticas unitarias. Este programa simulará el cambio de turno nocturno del hospital, donde se automatizan el triaje, los traslados y el balance de camas en un único proceso ordenado.
+
+⚙️ Lo que debes programar:
+En el método main de JefeFinalHospital.java, implementa la siguiente secuencia:
+
+Fase de Ingreso Masivo:
+
+Declara tu ArrayList<Paciente> llamado salaDeUrgencias.
+
+Registra de golpe a 4 pacientes usando List.of(...):
+
+Pedro, 19 años, "Fractura abierta"
+
+Milagros, 82 años, "Dificultad respiratoria"
+
+Roberto, 45 años, "Intoxicación alimentaria"
+
+Elena, 68 años, "Dolor torácico"
+
+Fase de Cribado y Traslado (Filtrado Avanzado):
+
+El hospital de campaña está saturado. Se toma la decisión de trasladar de forma inmediata a un hospital de ladrillo a todos los pacientes mayores de 70 años.
+
+Crea un segundo ArrayList<Paciente> llamado ambulanciaTraslado.
+
+Recorre la salaDeUrgencias con un bucle For-Each. Si un paciente tiene más de 70 años, agrégalo a la lista de la ambulancia.
+
+Fase de Limpieza de Camas:
+
+Una vez identificados los pacientes que se van en la ambulancia, utiliza el método de ArrayList correspondiente para eliminarlos de la salaDeUrgencias (puedes eliminarlos usando directamente el objeto que cumpla la condición).
+
+El Reporte del Turno:
+
+Imprime por pantalla el estado final usando System.out.printf:
+
+Cuántos pacientes se quedan en el hospital de campaña en observación.
+
+Muestra la ficha de los pacientes que se quedan usando su método .mostrarFicha().
+
+Cuántos pacientes se han evacuado en la ambulancia y quiénes son.
+
+Vuelve a tu entorno de trabajo, crea el archivo JefeFinalHospital.java, pícale esta lógica unificada y, cuando compiles y verifiques que el trasvase de pacientes funciona sin dejar rastro de los ancianos en la sala de urgencias, pásame la captura.
+
+A partir de aquí, sigo tu guion a rajatabla. ¿Vamos a por este Jefe Final?
