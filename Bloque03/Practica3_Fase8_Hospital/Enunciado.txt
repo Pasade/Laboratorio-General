@@ -1,0 +1,25 @@
+🏥 PASO 2.2 - PRÁCTICA UNITARIA 3: El Código de Emergencia Cero (Vaciado Completo)
+Ahora sí, cerremos el bloque de hospital por todo lo alto con el último reto para dominar el control total de los estados de un ArrayList.
+
+El director del hospital de campaña te acaba de notificar una orden de evacuación inmediata por seguridad (Código Cero). Todos los pacientes van a ser trasladados en helicóptero y las instalaciones deben quedar desiertas en segundos.
+
+⚙️ Lo que debes añadir en GestionHospital.java:
+Justo debajo de tu última línea de código (la línea 37, donde muestras que quedan 2 pacientes), añade estas últimas instrucciones:
+
+Mensaje de Alerta: Muestra por pantalla el aviso del desalojo:
+
+"🚨 ¡CÓDIGO CERO! Iniciando evacuación total del hospital de campaña..."
+
+El Vaciado: Aplica sobre tu variable listaDeIngresos el método de la clase ArrayList diseñado para limpiar y eliminar todos los elementos de golpe (pista: lo vimos en el listado de métodos teóricos).
+
+La Comprobación Inteligente: Diseña una estructura condicional if-else utilizando el método .isEmpty().
+
+Si la lista efectivamente se ha quedado vacía (true), imprime:
+
+"✅ Confirmado: El hospital ha sido evacuado con éxito. Pacientes ingresados: 0"
+
+Si por algún motivo fallara (false), imprime:
+
+"❌ ERROR: Todavía quedan pacientes atrapados en las instalaciones."
+
+Modifica esas últimas líneas en tu editor, compila con tu clásico javac *.java y lánzalo. En cuanto veas el aviso de evacuación completada con éxito en tu terminal, pásame la captura definitiva. ¡A por el broche de oro, Jose Antonio!
